@@ -1,0 +1,222 @@
+/* =============================================================================
+   GIAO DIỆN PHONG CÁCH LUXURY / SANG TRỌNG
+   Palette: Deep Navy Blue (#1a252f), Muted Gold (#cfa670), Off-White (#f8f9fa)
+============================================================================= */
+
+/* 1. Cấu hình nền tảng chung */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa; /* Màu nền trắng kem nhẹ nhàng */
+    -fx-text-fill: #2d3436; /* Màu chữ xám đen đậm, dễ đọc */
+}
+
+/* 2. Tiêu đề lớn (Header Label) */
+.header-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: 700; /* Bold đậm hơn */
+    -fx-text-fill: #1a252f; /* Xanh đen đậm */
+    -fx-padding: 15 0 25 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2); /* Bóng nhẹ tạo độ nổi */
+}
+
+/* 3. Thiết kế Nút bấm (Button) - Cao cấp */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f2f5); /* Gradient nhẹ tạo khối */
+    -fx-text-fill: #1a252f;
+    -fx-background-radius: 8; /* Bo góc tròn trịa hơn */
+    -fx-border-radius: 8;
+    -fx-border-color: #dce4ec;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20; /* Nút to hơn, thoáng hơn */
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 5, 0, 0, 2); /* Đổ bóng mềm mại */
+    -fx-transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt */
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #f0f2f5, #e2e6ea);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 8, 0, 0, 3); /* Bóng đậm hơn khi di chuột */
+    -fx-translate-y: -1px; /* Nút nổi lên nhẹ khi hover */
+}
+
+.button:pressed {
+    -fx-background-color: #dce4ec;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 1);
+    -fx-translate-y: 1px; /* Nút lún xuống khi bấm */
+}
+
+/* --- Các nút chức năng đặc biệt (Dùng màu Gold làm điểm nhấn) --- */
+
+/* Nút chính (Primary - Ví dụ: Sửa, Đăng nhập) -> Màu Xanh đen chủ đạo */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1a252f);
+    -fx-text-fill: #cfa670; /* Chữ màu vàng Gold sang trọng */
+    -fx-border-color: #1a252f;
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50);
+}
+
+/* Nút Thêm mới (Success) -> Màu Vàng Gold điểm nhấn */
+.btn-success {
+    -fx-background-color: linear-gradient(to bottom, #d4af37, #cfa670); /* Gradient vàng gold */
+    -fx-text-fill: white;
+    -fx-border-color: #cfa670;
+}
+.btn-success:hover {
+    -fx-background-color: linear-gradient(to bottom, #e0bd55, #d4af37);
+}
+
+/* Nút Cảnh báo (Warning) -> Màu Cam đất trầm */
+.btn-warning {
+    -fx-background-color: linear-gradient(to bottom, #e67e22, #d35400);
+    -fx-text-fill: white;
+    -fx-border-color: #d35400;
+}
+.btn-warning:hover {
+    -fx-background-color: linear-gradient(to bottom, #f39c12, #e67e22);
+}
+
+/* Nút Xóa (Danger) -> Màu Đỏ rượu vang trầm */
+.btn-danger {
+    -fx-background-color: linear-gradient(to bottom, #c0392b, #a93226);
+    -fx-text-fill: white;
+    -fx-border-color: #a93226;
+}
+.btn-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #e74c3c, #c0392b);
+}
+
+
+/* 4. Sidebar (Menu bên trái) - Xanh đen đậm & Gold */
+.sidebar {
+    -fx-background-color: #1a252f; /* Nền tối sang trọng */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 4, 0); /* Bóng đổ ngăn cách với nội dung */
+}
+
+/* Logo text trong sidebar */
+.sidebar .label {
+    -fx-text-fill: white;
+}
+.sidebar .label-gold { /* Nếu muốn chữ L'AMOUR màu vàng */
+    -fx-text-fill: #cfa670;
+}
+
+/* Nút trong Sidebar */
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b2bec3; /* Màu chữ xám bạc */
+    -fx-alignment: BASELINE_LEFT;
+    -fx-padding: 15 20 15 20; /* Rộng rãi hơn */
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 4px; /* Chỉ viền trái */
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-effect: none; /* Bỏ bóng của nút thường */
+    -fx-translate-y: 0;
+}
+
+.sidebar .button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05); /* Nền sáng nhẹ khi hover */
+    -fx-text-fill: #cfa670; /* Chữ chuyển màu vàng Gold */
+    -fx-border-left-color: #cfa670; /* Viền trái màu Gold */
+}
+
+/* Nút Đăng xuất */
+.sidebar .btn-logout {
+    -fx-text-fill: #e74c3c; /* Đỏ nhạt */
+    -fx-opacity: 0.8;
+}
+.sidebar .btn-logout:hover {
+    -fx-background-color: rgba(231, 76, 60, 0.1);
+    -fx-text-fill: #e74c3c;
+    -fx-border-left-color: #e74c3c;
+    -fx-opacity: 1.0;
+}
+
+/* 5. Ô nhập liệu (TextField, PasswordField, ComboBox) */
+.text-field, .password-field, .combo-box, .date-picker .text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #dce4ec;
+    -fx-border-width: 1px;
+    -fx-padding: 10; /* Padding rộng hơn để nhập liệu thoải mái */
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-transition: border-color 0.3s;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused, .date-picker:focused .text-field {
+    -fx-border-color: #cfa670; /* Viền màu Gold khi focus */
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(207, 166, 112, 0.2), 5, 0, 0, 0); /* Glow nhẹ màu gold */
+}
+
+/* 6. Bảng dữ liệu (TableView) - Tinh tế, không đường kẻ dọc */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 8, 0, 0, 4); /* Bảng nổi lên nền */
+}
+
+/* Header của bảng */
+.table-view .column-header-background {
+    -fx-background-color: #1a252f; /* Header màu tối sang trọng */
+    -fx-background-insets: 0;
+    -fx-background-radius: 8 8 0 0; /* Bo tròn 2 góc trên */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 45px;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #cfa670; /* Chữ header màu Gold */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Dòng dữ liệu */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f0f2f5 transparent; /* Chỉ giữ đường kẻ ngang rất mờ */
+    -fx-border-width: 1px;
+    -fx-padding: 5 0 5 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fcfcfc; /* Màu dòng lẻ */
+}
+
+/* Dòng khi được chọn */
+.table-row-cell:selected {
+    -fx-background-color: rgba(207, 166, 112, 0.15); /* Nền màu Gold nhạt */
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #1a252f; /* Chữ màu đậm khi chọn */
+    -fx-font-weight: 600;
+}
+
+/* 7. Các container dạng thẻ (Card) - Dùng trong Dashboard User */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 5);
+    -fx-padding: 25;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ContratFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Nouveau Contrat de Location">
+        <font><Font name="System Bold" size="16.0" /></font>
+    </Label>
+
+    <Label text="Choisir un Appartement (Disponible) :" />
+    <ComboBox fx:id="cbAppartement" prefWidth="300.0" promptText="-- Choisir un appartement --"/>
+
+    <Label text="Choisir un Résident :" />
+    <ComboBox fx:id="cbResident" prefWidth="300.0" promptText="-- Choisir un résident --"/>
+
+    <Label text="Date de début :" />
+    <DatePicker fx:id="dpStart" prefWidth="300.0" />
+
+    <Label text="Date de fin :" />
+    <DatePicker fx:id="dpEnd" prefWidth="300.0" />
+
+    <Label text="Loyer mensuel :" />
+    <TextField fx:id="txtLoyer" />
+
+    <Button text="Créer le contrat" onAction="#handleSave" maxWidth="1.7976931348623157E308" style="-fx-background-color: #4CAF50; -fx-text-fill: white;">
+        <font><Font name="System Bold" size="14.0" /></font>
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </Button>
+</VBox>

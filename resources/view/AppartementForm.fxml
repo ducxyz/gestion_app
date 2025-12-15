@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" alignment="CENTER_LEFT" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppartementFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Informations de l'Appartement">
+        <font><Font name="System Bold" size="16.0" /></font>
+    </Label>
+
+    <Label text="Numéro :" />
+    <TextField fx:id="txtNumero" promptText="Ex : A101" />
+
+    <Label text="Surface (m²) :" />
+    <TextField fx:id="txtSurface" promptText="Ex : 45.5" />
+
+    <Label text="Statut :" />
+    <ComboBox fx:id="cbStatut" prefWidth="200.0" />
+
+    <Label text="Description :" />
+    <TextField fx:id="txtDescription" promptText="Brève description" />
+
+    <Button text="Enregistrer" onAction="#handleSave" maxWidth="1.7976931348623157E308" style="-fx-background-color: #2196F3; -fx-text-fill: white;">
+        <font><Font name="System Bold" size="14.0" /></font>
+    </Button>
+</VBox>
